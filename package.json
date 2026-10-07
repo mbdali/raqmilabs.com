@@ -1,0 +1,16 @@
+{
+  "name": "raqmilabs-corporate-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Raqmi Labs corporate website - Static architecture",
+  "scripts": {
+    "dev:css": "tailwindcss -i ./src/input.css -o ./raqmilabs/assets/css/site.min.css --watch",
+    "build:css": "tailwindcss -i ./src/input.css -o ./raqmilabs/assets/css/site.min.css --minify",
+    "preview": "serve ./raqmilabs",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "serve": "^14.2.4"
+  }
+}

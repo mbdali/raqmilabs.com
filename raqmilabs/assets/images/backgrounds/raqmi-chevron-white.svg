@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="raqmi-logo-chevron-white-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.16" />
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Authentic Raqmi Logo Triple-Chevron Watermark (White for Dark Backgrounds) -->
+  <g stroke="url(#raqmi-logo-chevron-white-grad)" stroke-width="54" stroke-linejoin="miter" stroke-miterlimit="6" fill="none">
+    <path d="M 520 850 L 140 480 L 810 -50" />
+    <path d="M 650 850 L 270 480 L 940 -50" />
+    <path d="M 780 850 L 400 480 L 1070 -50" />
+  </g>
+</svg>

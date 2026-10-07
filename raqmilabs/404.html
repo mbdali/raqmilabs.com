@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Raqmi Labs</title>
+  <meta name="description" content="The requested page could not be found. Explore Raqmi Labs modular SaaS products, sector solutions, or contact our team.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script>
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <link rel="stylesheet" href="/assets/css/site.min.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body class="bg-white dark:bg-brand-charcoal text-brand-charcoal dark:text-slate-100 antialiased selection:bg-brand-blue selection:text-white flex flex-col min-h-screen">
+
+  <!-- ==================== GLOBAL HEADER START ==================== -->
+  <header id="siteHeader" class="sticky top-0 z-50 bg-white/90 dark:bg-brand-charcoal/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 transition-all duration-200">
+    <div class="site-container">
+      <div class="flex items-center justify-between h-20">
+        <a href="/index.html" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue rounded-lg p-1" aria-label="Raqmi Labs Home">
+          <img src="/assets/images/brand/raqmi-logo.svg" alt="Raqmi Labs" class="h-10 w-auto dark:hidden" width="180" height="40">
+          <img src="/assets/images/brand/raqmi-logo-white.svg" alt="Raqmi Labs" class="h-10 w-auto hidden dark:block" width="180" height="40">
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main Navigation">
+          <a href="/products/index.html" class="nav-link">Products</a>
+          <a href="/solutions/index.html" class="nav-link">Solutions</a>
+          <a href="/about.html" class="nav-link">About</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button type="button" data-theme-toggle class="p-2.5 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle theme">
+            <svg class="w-5 h-5 theme-sun-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+            <svg class="w-5 h-5 theme-moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+          </button>
+          <a href="/contact.html" class="btn-primary text-xs hidden sm:inline-flex">Contact Us</a>
+          <button id="mobileNavToggle" type="button" class="md:hidden p-2.5 rounded-lg text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Open mobile menu">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l16 0M4 12l16 0M4 18l16 0" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Mobile Drawer -->
+  <div id="mobileNavBackdrop" class="fixed inset-0 bg-brand-charcoal/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+  <div id="mobileNavDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-xs bg-white dark:bg-brand-charcoal shadow-2xl z-50 translate-x-full opacity-0 pointer-events-none transition-all duration-300 flex flex-col md:hidden border-l border-slate-200 dark:border-slate-800" role="dialog" aria-modal="true">
+    <div class="p-5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
+      <img src="/assets/images/brand/raqmi-logo.svg" alt="Raqmi Labs" class="h-8 w-auto dark:hidden">
+      <img src="/assets/images/brand/raqmi-logo-white.svg" alt="Raqmi Labs" class="h-8 w-auto hidden dark:block">
+      <button id="mobileNavClose" type="button" class="p-2 rounded-lg text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6l-12 12M6 6l12 12" /></svg></button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5 space-y-4 text-sm font-medium">
+      <a href="/index.html" class="block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">Home</a>
+      <a href="/products/index.html" class="block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">Products Suite</a>
+      <a href="/solutions/index.html" class="block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">Solutions</a>
+      <a href="/about.html" class="block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+      <a href="/contact.html" class="block p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800">Contact Channels</a>
+    </div>
+  </div>
+  <!-- ==================== GLOBAL HEADER END ==================== -->
+
+  <main class="flex-1 flex items-center justify-center py-20 px-4">
+    <div class="site-container max-w-2xl text-center">
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-blue-50 dark:bg-blue-950/50 text-brand-blue mb-6">
+        <span class="text-3xl font-extrabold">404</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-charcoal dark:text-white tracking-tight">
+        Page Not Found
+      </h1>
+      <p class="mt-4 text-slate-600 dark:text-slate-400 text-base leading-relaxed max-w-md mx-auto">
+        The destination you are looking for has been relocated or does not exist. Let's get you back on track.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="/index.html" class="btn-primary">Return to Homepage &rarr;</a>
+        <a href="/products/index.html" class="btn-secondary">Explore Products Suite</a>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-medium">
+        <a href="/products/erp.html" class="p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-brand-darkcard text-slate-600 dark:text-slate-400 hover:text-brand-blue transition-colors">Raqmi ERP</a>
+        <a href="/products/queue.html" class="p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-brand-darkcard text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Raqmi Queue</a>
+        <a href="/solutions/government.html" class="p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-brand-darkcard text-slate-600 dark:text-slate-400 hover:text-brand-blue transition-colors">Government</a>
+        <a href="/contact.html" class="p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-brand-darkcard text-slate-600 dark:text-slate-400 hover:text-brand-blue transition-colors">Contact Support</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== GLOBAL FOOTER START ==================== -->
+  <footer class="bg-brand-charcoal text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="site-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="/index.html" class="inline-block" aria-label="Raqmi Labs Home"><img src="/assets/images/brand/raqmi-logo-white.svg" alt="Raqmi Labs" class="h-9 w-auto"></a>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-sm">Modular SaaS software and scalable enterprise IT engineering built for modern organizations.</p>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-white uppercase tracking-wider mb-4">Products</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/products/erp.html" class="hover:text-white">Raqmi ERP</a></li>
+            <li><a href="/products/queue.html" class="hover:text-white">Raqmi Queue</a></li>
+            <li><a href="/products/attendance.html" class="hover:text-white">Raqmi Attendance</a></li>
+            <li><a href="/products/happiness.html" class="hover:text-white">Raqmi Happiness</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-white uppercase tracking-wider mb-4">Solutions</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/solutions/government.html" class="hover:text-white">Government</a></li>
+            <li><a href="/solutions/enterprise.html" class="hover:text-white">Enterprise</a></li>
+            <li><a href="/solutions/smes.html" class="hover:text-white">SMEs</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-xs font-bold text-white uppercase tracking-wider mb-4">Company</div>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="/contact.html" class="hover:text-white">Contact Channels</a></li>
+            <li><a href="/legal/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+            <li><a href="/legal/terms.html" class="hover:text-white">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 text-xs text-slate-500 text-center">&copy; 2026 Raqmi Labs. All rights reserved. People. Processes. Progress.</div>
+    </div>
+  </footer>
+  <!-- ==================== GLOBAL FOOTER END ==================== -->
+
+</body>
+</html>
